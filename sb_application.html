@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        CIS 162
+        Project 2-5
+                
+        Homepage to befriend Summer & Benny aka Index
+        Author: Alexandria Ramos
+        Date:   4/16/22     
+
+        Filename: sb_application.html
+     -->
+    <meta charset="utf-8" />
+    <title>To befriend Summer and Benny</title>
+    <link href="sb_stylesheet.css" rel="stylesheet" />
+    <script src="sb_formsubmit.js"></script>
+
+    
+</head>
+
+<body>
+   <header>
+       <img src="tealbanner_wpix.png" alt="Summer and Benny" />
+       <nav class="horizontalNavigation">
+          <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="sb_activities.html">Activities</a></li>
+             <li><a href="sb_adventures.html">Adventures</a></li>
+             <li><a href="sb_application.html">Application</a></li>
+             
+          </ul>
+       </nav>
+       <h1>Application to befriend our Fur-family</h1>        
+    
+    
+    
+      <p>Thank you for your interest in becoming our fur-friend. Your application submission helps us determine if you are a good fit to be our friend. Check your e-mail for results. </p>
+      <p>This application is private and confidential. Our fur-family will <em>NOT</em> share your contact information with third parties.</p>
+      <p>Required fields are marked by an asterisk (*)</p>
+       
+    </header>
+        
+    
+<Main>
+<form id="survey" action="https://lx732.github.io/Proj2-5/sb_application.html" method="post">
+    
+    
+    
+    <fieldset id="appInfo">
+          <legend>Applicant's Information</legend>
+    
+              <div class="formRow">
+                 <label for="name">Name*</label>
+                 <input name="appName" id="name" type="text" placeholder="first and last name" required  />
+              </div>
+              
+              <div class="formRow">
+                 <label for="street"> Street address </label>
+                 <input name="appStreet" id="street" type="text" />
+              </div>
+              
+              <div class="formRow">
+                 <label for="city"> City </label>
+                 <input name="appCity" id="city" type="text" value="Long Beach" />
+              </div>
+              
+              <div class="formRow">
+                 <label for="state"> State </label>
+                 <input name="appState" id="state" type="text" value="CA" />
+              </div>
+             
+              <div class="formRow">
+                 <label for="zip"> Postal code </label>
+                 <input name="appZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" 
+                        pattern="^\d{5}(-\d{4})?$" />
+              </div>
+              
+              <div class="formRow">
+                 <label for="phone"> Phone number </label>
+                 <input name="appPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+                        pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+              </div>            
+              
+              <div class="formRow">
+                 <label for="mail"> E-mail* </label>
+                 <input name="appEmail" id="mail" type="email" required  />
+              </div> 
+        
+     </fieldset> 
+    
+
+    
+        
+     <fieldset id="addInfo">
+           <legend>Additional Questions</legend>
+              
+                       
+              <div class="formRow">
+                 <label>Do you have dog allergies or have issues with lots of fur?</label>
+                 <fieldset class="optGroup">
+                    <label for="cYes">Yes</label>
+                    <input name="oCorrect" id="cYes" value="yes"
+              type="radio" />
+                    <label for="cNo">No</label>
+                    <input name="oCorrect" id="cNo" value="no"
+              type="radio" />
+                </fieldset>
+              </div>
+         
+         
+              <div class="formRow">
+                 <label for="walk">Do you like long walks?</label>
+                 <select name="walkType" id="walk">
+                    <option value="walk1" selected>Yes! Let's go!</option>
+                    <option value="walk2">Short walks</option>
+                    <option value="walk3">Sometimes, depends.</option>
+                    <option value="walk4">Not at all! Rain check!</option>
+                 </select>
+              </div>
+              
+              <div class="formRow">
+                 <label>Will you help carry a 30 lbs Corman when he gets tired?</label>
+                 <fieldset class="optGroup">
+                    <label for="hYes">Yes</label>
+                    <input name="hCarry" id="hYes" value="yes"
+              type="radio" />
+                 <label for="hNo">No</label>
+                 <input name="hCarry" id="hNo" value="no"
+              type="radio" />
+                 </fieldset>
+              </div>
+
+
+              <div class="formRow">
+                 <label>Will you accept wet kisses/grooming from both Summer and Benny?</label>
+                 <fieldset class="optGroup">
+                    <label for="wYes">Yes</label>
+                    <input name="wkisses" id="wYes" value="yes"
+              type="radio" />
+                    <label for="wNo">No</label>
+                    <input name="wkisses" id="wNo" value="no"
+              type="radio" />
+                </fieldset>
+              </div>   
+         
+         
+              <div class="formRow">
+                 <label>Will you respect the Non-negotiable banned items?</label>
+                 <fieldset class="optGroup">
+                    <label for="rYes">Yes</label>
+                    <input name="rbanned" id="rYes" value="yes"
+              type="radio" />
+                    <label for="rNo">No</label>
+                    <input name="rbanned" id="rNo" value="no"
+              type="radio" />
+                </fieldset>
+              </div>   
+              
+              
+              <div class="formRow">
+                <label for="rangeBox">On a scale of 1 to 10, How excited are you in being our friend?<br />
+                    (0=poor; 10=great)</label>
+                0
+                <input name="serviceRate" id="rangeBox" type="range"
+                       value="5" step="1" min="0" max="10" />
+                10
+              </div>
+              
+              
+     
+              <label for="commBox">Benny and Summer are currently very interested in Sticks for fetch, squeaky toys and full puppy massages. What are some activities they can look forward to sharing with you?</label>
+              <textarea name="custExp" id="commBox"></textarea>         
+              
+          </fieldset>
+          
+          <div id="buttons">
+                <input type="submit" value="Submit My Survey" />
+                <input type="reset" value="Cancel" />
+          </div>
+          
+</form> 
+    
+    <aside>
+        <div class="gallery">
+  <a target="_blank" href="furbabies_walk_yielding.png">
+    <img src="furbabies_walk_yielding.png" alt="Out on a walk" width="1200" height="800">
+  </a>
+  <div class="desc">Join us for our next walk! Be sure to click Submit My Survey</div>
+</div>
+    </aside>
+    
+    
+</Main>
+    
+    
+  
+      
+   <footer>
+    <p>Last updated 4/16/22</p>
+    <p>Call Me:<a href="tel:+15629671649"> (562) 967-1649</a></p>
+    <p>Email Me:<a href="mailto:ally_732@yahoo.com">ally_732@yahoo.com</a></p>
+    </footer>
+</body>
+</html>
